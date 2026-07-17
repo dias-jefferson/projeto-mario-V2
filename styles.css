@@ -9,7 +9,7 @@
     width: 200px;
 }
 
-button {
+.bt-contato {
     background-color: #c51111;
     color: #fff;
     border: none;
@@ -19,6 +19,17 @@ button {
     text-transform: uppercase;
     cursor: pointer;
     margin-top: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.bt-contato:hover {
+    background-color: #a00d0d;
+}
+
+.bt-contato:active {
+    background-color: #fff;
+    border: 2px solid #c51111;
+    color: #c51111;
 }
 
 .logo-luigi-mario {
@@ -182,7 +193,11 @@ form textarea {
     padding: 20px;
     border-radius: 10px;
     width: 300px;
-    transition: 0.8s ease-in-out;
+    transition: 0.5s ease-in-out;
+}
+
+.servico-card:hover {
+    transform: scale(1.05);
 }
 
 .servico-card h3 {
@@ -203,4 +218,53 @@ form textarea {
     color: #fff;
     font-size: 15px;
     line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .caixa-principal, .caixa-servicos {
+        flex-direction: column;
+    }
+
+    .caixa-principal{
+        padding: 30px;
+    }
+
+    .caixa-info-texto{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .caixa-servicos {
+        gap: 10px;
+    }
+
+    .logo-mario{
+        display: none;
+    }
+
+    .logo-luigi-mario{
+        height: auto;
+        width: 80%;
+    }
+
+    .caixa-logo-luigi-mario {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cabecalho{
+        padding: 10px;
+    }
+
+    .cabecalho img {
+        width: 30px;
+    }
+
+    .cabecalho a {
+        font-size: 14px;
+    }
 }
